@@ -1,6 +1,6 @@
 ## xatlas
 
-[![Actions Status](https://github.com/jpcy/xatlas/workflows/build/badge.svg)](https://github.com/jpcy/xatlas/actions) [![Appveyor CI Build Status](https://ci.appveyor.com/api/projects/status/github/jpcy/xatlas?branch=master&svg=true)](https://ci.appveyor.com/project/jpcy/xatlas) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Actions Status](https://github.com/hyunkoome/xatlas/workflows/build/badge.svg)](https://github.com/hyunkoome/xatlas/actions) [![Appveyor CI Build Status](https://ci.appveyor.com/api/projects/status/github/hyunkoome/xatlas?branch=master&svg=true)](https://ci.appveyor.com/project/hyunkoome/xatlas) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 xatlas is a small C++11 library with no external dependencies that generates unique texture coordinates suitable for baking lightmaps or texture painting.
 
@@ -25,7 +25,7 @@ It is an independent fork of [thekla_atlas](https://github.com/Thekla/thekla_atl
 
 Premake is used. For CMake support, see [here](https://github.com/cpp-pm/xatlas).
 
-Integration into an existing build is simple, only `xatlas.cpp` and `xatlas.h` are required. They can be found in [source/xatlas](https://github.com/jpcy/xatlas/blob/master/source/xatlas)
+Integration into an existing build is simple, only `xatlas.cpp` and `xatlas.h` are required. They can be found in [source/xatlas](https://github.com/hyunkoome/xatlas/blob/master/source/xatlas)
 
 #### Windows
 
@@ -53,7 +53,7 @@ The `xatlas::Atlas` instance created in the first step now contains the result: 
 
 Cleanup with `xatlas::Destroy`.
 
-[Example code here.](https://github.com/jpcy/xatlas/blob/master/source/examples/example.cpp)
+[Example code here.](https://github.com/hyunkoome/xatlas/blob/master/source/examples/example.cpp)
 
 ### Generate an atlas (tools/editor integration API)
 
@@ -66,7 +66,7 @@ All of these functions take a progress callback. Return false to cancel.
 
 You can call any of these functions multiple times, followed by the proceeding functions, to re-generate the atlas. E.g. calling `xatlas::PackCharts` multiple times to tweak options like unit to texel scale and resolution.
 
-See the [viewer](https://github.com/jpcy/xatlas/tree/master/source/examples/viewer) for example code.
+See the [viewer](https://github.com/hyunkoome/xatlas/tree/master/source/examples/viewer) for example code.
 
 ### Pack multiple atlases into a single atlas
 
@@ -74,7 +74,7 @@ See the [viewer](https://github.com/jpcy/xatlas/tree/master/source/examples/view
 2. Add one or more meshes with `xatlas::AddUvMesh`.
 3. Call `xatlas::PackCharts`.
 
-[Example code here.](https://github.com/jpcy/xatlas/blob/master/source/examples/example_uvmesh.cpp)
+[Example code here.](https://github.com/hyunkoome/xatlas/blob/master/source/examples/example_uvmesh.cpp)
 
 ## Technical information / related publications
 
