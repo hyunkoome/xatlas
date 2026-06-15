@@ -1,0 +1,11 @@
+{
+  "name": "glb-pipeline",
+  "version": "0.1.0",
+  "description": "GLB compression pipeline: simplify -> UV unwrap -> (bake) -> GLB",
+  "dependencies": [
+    "tinygltf",
+    "meshoptimizer",
+    "nlohmann-json",
+    "stb"
+  ]
+}
