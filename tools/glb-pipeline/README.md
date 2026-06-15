@@ -60,6 +60,26 @@ cmake --build --preset windows
 
 - `--ratio` : 단순화 목표 비율(삼각형 수 기준, 기본 0.25).
 
+## Python 보조 환경 (지표/검수용, uv)
+
+품질 지표 계산 등 Python 도구는 **uv 격리 환경**을 씁니다 (시스템 pip 미사용).
+버전은 `requirements.in`(상위 명세) → `requirements.txt`(잠금)로 관리합니다.
+
+```bash
+bash scripts/setup-python.sh          # uv 자동설치 + .venv 생성 + lock 동기화
+source .venv/bin/activate
+```
+
+의존성 변경:
+
+```bash
+# requirements.in 편집 후
+uv pip compile requirements.in -o requirements.txt   # 잠금 갱신
+uv pip sync requirements.txt                          # 환경 반영
+```
+
+> 테스트 GLB 생성기 `scripts/gen_test_glb.py`는 의존성이 없어 `python3`로 바로 실행됩니다.
+
 ## 디렉터리
 
 ```

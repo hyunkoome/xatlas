@@ -1,5 +1,7 @@
 build/
 vcpkg_installed/
 assets/
+.venv/
+__pycache__/
 *.glb
 !**/reference/*.glb

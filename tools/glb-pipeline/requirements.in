@@ -1,0 +1,15 @@
+# glb-pipeline 보조 Python 도구의 상위(top-level) 의존성 명세.
+#   - 여기엔 직접 쓰는 패키지만 느슨하게 적는다.
+#   - 잠금(lock)된 정확한 버전은 requirements.txt 에 생성된다:
+#       uv pip compile requirements.in -o requirements.txt
+#   - 설치/동기화:
+#       uv pip sync requirements.txt
+#
+# 용도: 품질 지표(PSNR/SSIM, 기하 오차), 이미지/메시 검수.
+# 참고: scripts/gen_test_glb.py 는 의존성 없이 동작(이 환경 불필요).
+
+numpy>=1.24
+Pillow>=10.0
+
+# 선택(필요해지면 주석 해제 후 재컴파일):
+# trimesh>=4.0
