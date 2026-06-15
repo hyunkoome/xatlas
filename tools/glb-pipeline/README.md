@@ -6,10 +6,14 @@
 
 ## 현재 상태 (v1 골격)
 
+상세 로드맵·체크리스트는 [TODO.md](TODO.md) 참고.
+
 - [x] GLB 로드 (tinygltf)
 - [x] weld + decimation (meshoptimizer)
 - [x] UV unwrap + 패킹 (xatlas, 본 저장소 소스 직접 컴파일)
 - [x] GLB 저장 (tinygltf, 현재는 round-trip)
+- [x] **Ubuntu 빌드 + end-to-end 실행 검증** (gcc 12, vcpkg)
+- [x] uv 기반 Python 보조 환경 (버전 고정)
 - [ ] 단순화된 지오메트리 + 새 UV를 출력 GLB로 재구성
 - [ ] 베이킹: 노멀 + 베이스컬러 전사 (Embree)
 - [ ] 정량 지표 / 아틀라스 PNG 덤프
